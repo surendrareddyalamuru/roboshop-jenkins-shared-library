@@ -3,21 +3,14 @@ def call() {
             sh 'env'
             common.codequality()
 
-//            stage('Style Checks') {
-//                when {
-//                    anyOf{
-//                        branch 'main'
-//                        tag "*"
-//                    }
-//                }
-//                steps {
-//                    echo 'Code Quality'
-//                    sh 'env'
-//                }
-//
-//            }
-//
-//
+            if ( BRANCH_NAME == "main" || tag ==~ "*") {
+                stage('Style Checks') {
+                    echo 'style checks'
+                }
+            }
+
+
+
 //            stage('unit tests') {
 //                when {
 //                    anyOf{
