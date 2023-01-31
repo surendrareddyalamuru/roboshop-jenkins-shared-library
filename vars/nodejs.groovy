@@ -1,5 +1,5 @@
 def call() {
-    pipeline {
+    node {
             sh 'env'
             common.codequality()
 
