@@ -9,31 +9,5 @@ def call() {
             common.codechecks()
             common.artifacts()
 
-//            stage('Download Dependencies') {
-//                when { tag "*" }
-//                steps {
-//                    echo 'download dependencies'
-//                }
-//
-//            }
-//
-//
-//            stage('Prepare Artifacts') {
-//                when { tag "*" }
-//                steps {
-//                    echo 'prepare artifacts'
-//                }
-//
-//            }
-//
-//
-//            stage('Publish Artifacts') {
-//                when { tag "*" }
-//                steps {
-//                    echo 'publish artifacts'
-//                }
-//
-//            }
-
     }
 }
