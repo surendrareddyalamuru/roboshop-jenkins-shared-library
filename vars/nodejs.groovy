@@ -6,24 +6,8 @@ def call() {
             }
             sh 'env'
             common.codequality()
-            common.stylechecks()
+            common.codechecks()
 
-
-
-//            stage('unit tests') {
-//                when {
-//                    anyOf{
-//                        branch 'main'
-//                        tag "*"
-//                    }
-//                }
-//                steps {
-//                    echo 'unit tests'
-//                }
-//
-//            }
-//
-//
 //            stage('Download Dependencies') {
 //                when { tag "*" }
 //                steps {
