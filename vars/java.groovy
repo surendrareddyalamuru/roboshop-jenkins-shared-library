@@ -5,7 +5,20 @@ def call() {
 
         stages {
 
-            common.codequality()
+            stage('compile code') {
+                steps {
+                    echo 'compile code'
+                }
+
+            }
+            stage('Code quality') {
+                steps {
+                    echo 'Code Quality'
+                }
+
+            }
+
+
 
             stage('Style Checks') {
                 when {
@@ -36,10 +49,10 @@ def call() {
             }
 
 
-            stage('Download Dependencies') {
+            stage('Build packages') {
                 when { tag "*" }
                 steps {
-                    echo 'download dependencies'
+                    echo 'Build packages'
                 }
 
             }
