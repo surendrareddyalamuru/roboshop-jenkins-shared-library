@@ -14,3 +14,18 @@ def codechecks() {
         }
     }
 }
+
+def artifacts() {
+    if ( TAG_NAME ==~ ".*") {
+
+        stage('Download dependencies') {
+            echo 'download dependencies'
+        }
+        stage('prepare Artifacts') {
+            echo 'prepare artifacts'
+        }
+        stage('publish Artifacts') {
+            echo 'publish artifacts'
+        }
+    }
+}

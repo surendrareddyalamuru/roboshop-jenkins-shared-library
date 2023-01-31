@@ -7,6 +7,7 @@ def call() {
             sh 'env'
             common.codequality()
             common.codechecks()
+            common.artifacts()
 
 //            stage('Download Dependencies') {
 //                when { tag "*" }
