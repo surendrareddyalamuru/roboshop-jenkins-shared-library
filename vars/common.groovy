@@ -1,6 +1,7 @@
 def codequality() {
     stage('Code quality') {
         echo 'Code Quality'
+        sh 'env'
     }
 }
 
