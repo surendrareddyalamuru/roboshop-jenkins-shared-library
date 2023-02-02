@@ -3,7 +3,7 @@ def codequality() {
         withCredentials([usernamePassword(credentialsId: 'SONAR', passwordVariable: 'sonarPass', usernameVariable: 'sonarUser')]) {
         sh '''
         
-         sonar-scanner -Dsonar.host.url=http://172.31.5.208:9000 -Dsonar.login=${sonarUser} -Dsonar.password=${sonarPass} -Dsonar.projectkey=${COMPONENT} -Dsonar.qualitygate.wait=true
+         sonar-scanner -Dsonar.host.url=http://172.31.5.208:9000 -Dsonar.login=${sonarUser} -Dsonar.password=${sonarPass} -Dsonar.projectKey=${COMPONENT} -Dsonar.qualitygate.wait=true
         '''
       }
     }
