@@ -1,4 +1,5 @@
 def call() {
+    env.APPTYPE = "nodejs"
     node {
             sh 'env'
             common.codeCheckout()
